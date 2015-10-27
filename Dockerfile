@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
     vim
     
 RUN mkdir -p /opt/cloudpassage/connector
-COPY ./* /opt/cloudpassage/connector
+COPY ./* /opt/cloudpassage/connector/
 COPY ./README.md /
 COPY ./README.md /root/
 RUN echo "cat /root/README.md" >> /root/.bashrc
