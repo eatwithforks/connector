@@ -5,9 +5,10 @@ MAINTAINER Ash Wilson
 RUN apt-get update && apt-get install -y \
     vim
     
-RUN mkdir -p /opt/cloudpassage/
-COPY ./*.py /opt/cloudpassage/
+RUN mkdir -p /opt/cloudpassage/connector
+COPY ./* /opt/cloudpassage/connector
 COPY ./README.md /
 COPY ./README.md /root/
+RUN echo "cat /root/README.md" >> /root/.bashrc
 
 CMD /bin/bash cat /README.md
