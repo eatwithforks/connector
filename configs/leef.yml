@@ -1,0 +1,173 @@
+leefFormatVersion : 1.0
+leefVendor: CloudPassage
+leefProduct: CPHalo
+leefProductVersion: 1.0
+leefFieldMapping :
+    actor_username: usrName
+    server_ip_address: src
+    server_hostname: srcName
+    policy_name: policy
+    rule_name: policy
+    created_at: devTime
+
+leefLoginEventNames : [
+    halo_login_success
+    halo_login_failure
+    ghostport_success
+    ghostport_failure
+]
+leefLogoutEventNames : [ halo_logout ]
+leefDateFormat : yyyy-MM-dd'T'HH:mm:ss.SSS
+leefOmitFields : [
+    name
+    critical
+]
+
+leefCategoriesByName:
+    server_events: [
+        daemon_compromised,
+        multiple_root_accounts,
+        ip_address_changed,
+        fim_object_added,
+        fim_object_missing,
+        fim_signature_changed,
+        fim_target_integrity_changed,
+        sca_rule_failed,
+        server_account_created,
+        server_firewall_modified_locally,
+        server_missing,
+        server_account_deleted,
+        server_restarted,
+        server_retired,
+        server_shutdown,
+        server_unretired,
+        vulnerable_software_package_found,
+        lids_rule_failed,
+        duplicate_uid_accounts
+    ]
+    api_key_management: [
+        api_client_created,
+        api_client_deleted,
+        api_client_secret_viewed,
+        api_client_secret_viewed,
+        api_client_updated
+    ]
+    configuration_security_scanning_management: [
+        sca_policy_assigned,
+        sca_policy_created,
+        sca_policy_deleted,
+        sca_policy_exported,
+        sca_policy_imported,
+        sca_policy_modified,
+        sca_policy_unassigned
+    ]
+    software_vulnerability_assessment_management: [
+        cve_exception_created,
+        cve_exception_expired,
+        cve_exception_deleted
+    ]
+    file_integrity_scanning_management: [
+        fim_baseline_created,
+        fim_baseline_deleted,
+        fim_baseline_expired,
+        fim_baseline_failed,
+        fim_baseline_invalid,
+        fim_exception_created,
+        fim_exception_deleted,
+        fim_exception_expired,
+        fim_policy_assigned,
+        fim_policy_created,
+        fim_policy_deleted,
+        fim_policy_exported,
+        fim_policy_imported,
+        fim_policy_modified,
+        fim_policy_unassigned,
+        fim_re_baseline,
+        fim_scan_disabled,
+        fim_scan_enabled,
+        fim_scan_failed,
+        fim_scan_modified,
+        fim_scan_requested
+    ]
+    firewall_management: [
+        firewall_policy_assigned,
+        firewall_policy_created,
+        firewall_policy_deleted,
+        firewall_policy_modified,
+        firewall_policy_unassigned,
+        firewall_restore_requested,
+        firewall_service_added,
+        firewall_service_deleted,
+        firewall_service_modified
+    ]
+    ghostports: [
+        ghostport_close,
+        ghostport_failure,
+        ghostport_provisioning,
+        ghostport_success
+    ]
+    halo_daemon_management: [
+        daemon_version_change,
+        server_deleted,
+        server_moved,
+        new_server,
+        daemon_settings_modified
+    ]
+    halo_users_and_authentication: [
+        activation_link_failed,
+        authorized_ips_modified,
+        halo_login_failure,
+        halo_login_success,
+        halo_logout,
+        halo_user_deactivated,
+        halo_user_deleted,
+        halo_user_invited,
+        halo_user_locked,
+        halo_user_modified,
+        halo_user_reactivated,
+        halo_user_reinvited,
+        halo_user_unlocked,
+        master_account_linked,
+        password_changed,
+        password_config_changed,
+        password_recovery_requested,
+        password_recovery_request_failed,
+        password_recovery_success,
+        session_timeout,
+        sms_phone_number_verified,
+        authentication_settings_modified,
+        halo_user_logout,
+        session_timeout_modified,
+        api_login_success,
+        api_login_failure
+    ]
+    key_management: [
+        key_created,
+        key_deleted,
+        km_policy_created,
+        km_policy_deleted,
+        km_policy_modified,
+        key_status_updated,
+        key_expired,
+        km_policy_assigned,
+        km_policy_unassigned,
+        key_request_success,
+        key_delivery_success
+    ]
+    log-based_intrusion_detection_management: [
+        lids_scan_disabled,
+        lids_scan_enabled,
+        lids_policy_assigned,
+        lids_policy_created,
+        lids_policy_deleted,
+        lids_policy_exported,
+        lids_policy_modified,
+        lids_policy_unassigned
+    ]
+    server_access_management: [
+        local_account_create_request,
+        local_account_activate_request,
+        local_account_deactivate_request,
+        local_account_update_request,
+        local_account_update_ssh_keys_request
+    ]

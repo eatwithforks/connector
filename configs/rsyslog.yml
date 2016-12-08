@@ -1,0 +1,53 @@
+facility:
+    linux:
+        kern: 0
+        user: 8
+        mail: 16
+        daemon: 24
+        auth: 32
+        syslog: 40
+        lpr: 48
+        news: 56
+        uucp: 64
+        cron: 72
+        authpriv: 32
+        local0: 128
+        local1: 136
+        local2: 144
+        local3: 152
+        local4: 160
+        local5: 168
+        local6: 176
+        local7: 184
+    windows:
+        kern: 0
+        user: 1
+        mail: 2
+        daemon: 3
+        auth: 4
+        syslog: 5
+        lpr: 6
+        news: 7
+        uucp: 8
+        cron: 9
+        authpriv: 10
+        ftp: 11
+        local0: 16
+        local1: 17
+        local2: 18
+        local3: 19
+        local4: 20
+        local5: 21
+        local6: 22
+        local7: 23
+level:
+    emerg: 0
+    alert: 1
+    crit: 2
+    err: 3
+    warning: 4
+    notice: 5
+    info: 6
+    debug: 7
+
+
