@@ -10,6 +10,7 @@ import dateutil.parser
 import cloudpassage
 from lib.utility import Utility
 import lib.settings as settings
+from lib.config_helper import ConfigHelper
 
 
 def _pickle_method(message):
@@ -38,11 +39,15 @@ class Event(object):
         self.data_dir = os.path.join(os.path.dirname(__file__), os.pardir, 'data')
         self.has_configdir = False
         self.first_batch = True
+        self.config = ConfigHelper()
+
 
     def create_halo_session_object(self):
         """create halo session object"""
 
-        session = cloudpassage.HaloSession(self.key_id, self.secret_key)
+        session = cloudpassage.HaloSession(self.key_id,
+                                           self.secret_key,
+                                           integration_string=self.config.ua)
         return session
 
     def get(self, per_page, date, page):
