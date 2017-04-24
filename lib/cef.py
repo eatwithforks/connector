@@ -26,12 +26,18 @@ class Cef(object):
         """build cef outliers"""
         mapping['deviceDirection'] = 1 if 'actor_username' in event else 0
 
+    def format_cef_date(self, date):
+        date_time = datetime.datetime.strptime(date, '%Y-%m-%dT%H:%M:%S.%fZ')
+        return date_time.strftime('%b %d %Y %H:%M:%S UTC')
+
     def build_cef_mapping(self, event):
         """build cef mapping"""
         mapping = {}
         self.build_cef_outliers(mapping, event)
         for key, value in self.configs['cefFieldMapping'].items():
             if key in event:
+                if key == "created_at":
+                    event[key] = self.format_cef_date(event[key])
                 mapping[value] = event[key]
                 del event[key]
         if event:
