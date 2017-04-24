@@ -1,13 +1,13 @@
-#Halo Event Connector v1.8
+# Halo Event Connector v1.9
 
 Author: toolbox@cloudpassage.com
 
-###Required package:
+### Required package:
 Cloudpassage SDK:
 
 Install from pip with `pip install cloudpassage`. If you want to make modifications to the SDK you can install it in editable mode by downloading the source from this github repo, navigating to the top directory within the archive and running pip install -e . (note the . at the end). Or you can visit https://github.com/cloudpassage/cloudpassage-halo-python-sdk to clone it directly from our github.
 
-###Intro - Quick Start
+### Intro - Quick Start
 In this repo we have included the pdf documentation for using these scripts to pull Halo event alerts into either Sumo Logic or Splunk - however, you will just as easily be able to integrate Halo events into other popular SIEM tools, such as ArcSight, or with your Syslog infrastructure.
 
 In addition, there are several ways you can run this script to stream event data to your desired target.
@@ -80,7 +80,7 @@ optional arguments:
 ```
 ### Halo Event Connector on Linux
 
-1. Install Python 2.7.11 or newer (https://www.python.org/downloads) 
+1. Install Python 2.7.11 or newer (https://www.python.org/downloads)
 
 2. Once Python is installed, install the necessary Python modules
 
@@ -89,9 +89,9 @@ pip install python-dateutil
 pip install pytz
 ```
 
-3. Download latest CloudPassage Halo API SDK (https://github.com/cloudpassage/cloudpassage-halo-python-sdk/tree/develop). 
+3. Download latest CloudPassage Halo API SDK (https://github.com/cloudpassage/cloudpassage-halo-python-sdk/tree/develop).
 
-4. Install the SDK via cli by navigating to the downloaded expanded folder location and running 
+4. Install the SDK via cli by navigating to the downloaded expanded folder location and running
 
 ```
 pip install .
@@ -120,9 +120,9 @@ python -m pip install python-dateutil
 python -m pip install pytz
 ```
 
-4. Download latest CloudPassage Halo API SDK (https://github.com/cloudpassage/cloudpassage-halo-python-sdk/tree/develop). 
+4. Download latest CloudPassage Halo API SDK (https://github.com/cloudpassage/cloudpassage-halo-python-sdk/tree/develop).
 
-5. Install the SDK via cli by navigating to the downloaded expanded folder location and running 
+5. Install the SDK via cli by navigating to the downloaded expanded folder location and running
 
 ```
 python -m pip install .
@@ -140,7 +140,7 @@ python halo_events.py --auth=haloEvents.py --starting=YYYY-MM-DD
 
 #### Remote Syslog Windows
 * Navigate to `configs/portal.yml` you can specify the syslog host there via
-  
+
   windows_syslog_host:
   windows_syslog_port:
 
