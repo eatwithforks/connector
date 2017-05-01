@@ -9,7 +9,6 @@ leefFieldMapping :
     policy_name: policy
     rule_name: policy
     created_at: devTime
-
 leefLoginEventNames : [
     halo_login_success
     halo_login_failure
@@ -17,14 +16,15 @@ leefLoginEventNames : [
     ghostport_failure
 ]
 leefLogoutEventNames : [ halo_logout ]
-leefDateFormat : yyyy-MM-dd'T'HH:mm:ss.SSS
+leefDateFormat : yyyy-MM-dd’T’HH:mm:ss.SSS
 leefOmitFields : [
     name
     critical
 ]
-
 leefCategoriesByName:
     server_events: [
+        account_created,
+        account_deleted,
         daemon_compromised,
         multiple_root_accounts,
         ip_address_changed,
@@ -41,9 +41,12 @@ leefCategoriesByName:
         server_retired,
         server_shutdown,
         server_unretired,
+        server_deactivated,
+        server_reactivated,
         vulnerable_software_package_found,
         lids_rule_failed,
-        duplicate_uid_accounts
+        duplicate_uid_accounts,
+        issue_resolved
     ]
     api_key_management: [
         api_client_created,
@@ -64,7 +67,8 @@ leefCategoriesByName:
     software_vulnerability_assessment_management: [
         cve_exception_created,
         cve_exception_expired,
-        cve_exception_deleted
+        cve_exception_deleted,
+        cve_exception_updated
     ]
     file_integrity_scanning_management: [
         fim_baseline_created,
@@ -111,7 +115,8 @@ leefCategoriesByName:
         server_deleted,
         server_moved,
         new_server,
-        daemon_settings_modified
+        daemon_settings_modified,
+        daemon_retirement_timeout_modified
     ]
     halo_users_and_authentication: [
         activation_link_failed,
@@ -169,5 +174,6 @@ leefCategoriesByName:
         local_account_activate_request,
         local_account_deactivate_request,
         local_account_update_request,
-        local_account_update_ssh_keys_request
+        local_account_update_ssh_keys_request,
+        sam_scan_requested
     ]

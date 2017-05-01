@@ -12,6 +12,8 @@ cefFieldMapping:
     actor_username: duser
     name: fname
 eventIdMap:
+    account_created: 910
+    account_deleted: 911
     activation_link_failed: 906
     agent_key_regenerated: 900
     api_client_created: 901
@@ -25,7 +27,9 @@ eventIdMap:
     cve_exception_created: 604
     cve_exception_deleted: 606
     cve_exception_expired: 605
+    cve_exception_updated: 607
     daemon_compromised: 712
+    daemon_retirement_timeout_modified: 727
     daemon_settings_modified: 720
     daemon_version_change: 713
     duplicate_uid_accounts: 726
@@ -79,6 +83,7 @@ eventIdMap:
     halo_user_reinvited: 915
     halo_user_unlocked: 423
     ip_address_changed: 718
+    issue_resolved: 728
     key_created: 812
     key_deleted: 813
     key_delivery_success: 822
@@ -112,6 +117,7 @@ eventIdMap:
     password_recovery_request_failed: 419
     password_recovery_requested: 400
     password_recovery_success: 420
+    sam_scan_requested: 504
     sca_policy_assigned: 505
     sca_policy_created: 506
     sca_policy_deleted: 507
@@ -122,6 +128,8 @@ eventIdMap:
     sca_rule_failed: 503
     server_account_created: 714
     server_account_deleted: 705
+    server_deactivated: 707
+    server_reactivated: 708
     server_deleted: 717
     server_firewall_modified_locally: 706
     server_group_added: 425

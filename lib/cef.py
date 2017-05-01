@@ -3,6 +3,7 @@
 """Cef class"""
 from lib.options import Options
 import lib.loadyaml as loadyaml
+import datetime
 
 
 class Cef(object):
