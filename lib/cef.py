@@ -38,8 +38,10 @@ class Cef(object):
         for key, value in self.configs['cefFieldMapping'].items():
             if key in event:
                 if key == "created_at":
-                    event[key] = self.format_cef_date(event[key])
-                mapping[value] = event[key]
+                    cef_date = self.format_cef_date(event[key])
+                    mapping[value] = cef_date
+                else:
+                    mapping[value] = event[key]
                 del event[key]
         if event:
             mapping["cs1label"] = "extras"
