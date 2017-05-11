@@ -38,7 +38,8 @@ class Utility(object):
         """write output"""
         with open(filename, 'a') as outputfile:
             for formatted_event in formatted_events:
-                outputfile.write(str(formatted_event))
+                outputfile.write("%s\n" % str(formatted_event))
+
         outputfile.close()
 
     def output_events(self, batched):
