@@ -44,9 +44,15 @@ class Cef(object):
                     mapping[value] = event[key]
                 del event[key]
         if event:
-            mapping["cs1label"] = "extras"
+            mapping["cs1Label"] = "extras"
             mapping["cs1"] = event
         return mapping
+
+    def escape_specials(self, cef_str):
+        formatted = cef_str.replace("\\","\\\\")
+        formatted = cef_str.replace("=","\\=")
+
+        return formatted
 
     def format_cef(self, batched):
         """format cef"""
@@ -57,5 +63,8 @@ class Cef(object):
             schema = self.build_cef_mapping(event)
             for key, value in schema.items():
                 cef_str += "%s=%s " % (key, value)
-            aggregated_cef.append("%s%s" % (constants_map, cef_str))
+            cef_raw = "%s%s" % (constants_map, cef_str)
+            cef_formatted = self.escape_specials(cef_raw)
+
+            aggregated_cef.append(cef_formatted)
         return aggregated_cef
