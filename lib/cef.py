@@ -62,9 +62,6 @@ class Cef(object):
             constants_map = self.cef_constants(event)
             schema = self.build_cef_mapping(event)
             for key, value in schema.items():
-                cef_str += "%s=%s " % (key, value)
-            cef_raw = "%s%s" % (constants_map, cef_str)
-            cef_formatted = self.escape_specials(cef_raw)
-
-            aggregated_cef.append(cef_formatted)
+                cef_str += "%s=%s " % (key, self.escape_specials(str(value)))
+            aggregated_cef.append("%s%s" % (constants_map, cef_str))
         return aggregated_cef
